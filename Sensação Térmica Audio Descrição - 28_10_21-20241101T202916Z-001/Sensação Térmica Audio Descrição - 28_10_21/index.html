@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Meteorológica</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="termometro.jpeg" style="height: 100%; width: 100%;">
+    </div>
+    <div class="main">
+        <p class="subtitulo"> O QUE É SENSAÇÃO TÉRMICA ?</p>
+        <h1 class="titulo"> Sensação Térmica <button class="button" style="font-size: 14px; vertical-align: middle;" onclick="SensacaoTermica();">Opção em Áudio</button></h1>
+        <div class="colunas">
+            <div style="width: 45%; float:left; padding-right: 25px; text-align: justify;">
+                <p>Definição<br>A sensação térmica é o que uma pessoa percebe em determinido ambiente, temos a ideia de quentura quando as temperaturas estão elevadas e frio quando estão baixas, ela é uma equação empírica no qual considera algumas variáveis meteorológicas, como a intesidade de uma massa de ar, a umidade relativa, a pressão atmosférica no momento e a temperatura do ar, junta todos esses dados e elabora uma equação que determina a sensação térmica no momento, usa-se uma tabela denominada Winchill que enumera de acordo com a temperatura e umidade uma possível temperatura aparente para um individuo, ou seja qual é a temperatura que a pessoa sente no momento.</p>
+            </div>
+            <div style="text-align: right; text-align: justify;">
+                <br>
+                <p style="margin-top: 17px; margin-bottom: 3px;">
+                Temperatura - Grau de agitação das moléculas, ou seja, o índice de calor presente no ambiente.
+                <br>
+                Temperatura do Ponto de Orvalho - Designa a temperatura no qual, a umidade do ar começa a se condensar em pequenas gotas de água.
+                <br>
+                Umidade Relativa - É a quantidade de água na forma de vapor existente na atmosfera no momento da verificação, em relação ao total máximo que poderia existir, de acordo com a Temperatura observada.
+                <br>
+                Umidade Absoluta - Teor de vapor d'água total no ambiente em determinado momento. O valor varia de 0 a 4% no máximo.
+                <br>
+                Vento - É o ar em movimento
+                <br>
+                Índice de Calor - É a temperatura que sentimos devido a junção entre a temperatura do ar e a umidade relativa do ar.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="colunas">
+            <div style="float:left; border: 5px solid lightgrey; border-radius: 5%;">
+                <div style=" float: left;">
+                    <div style="padding: 5px;">
+                        <p style="margin-bottom: 3px; margin-top:0; font-size: 15px;">Temperatura do Ar</p>
+                        <span><input id="TA" type="number"> °C</span>
+                    </div>
+                    <div style="padding: 5px">
+                        <p style="margin-bottom: 3px; font-size: 15px; margin-top: 0;">Umidade Relativa</p>
+                        <span><input id="RH" type="number"> %</span>
+                    </div>
+                    <button class="button" style="margin: 5px;" onclick="HeatIndex();">Calcular</button>
+                </div>
+                <div style="float: right; padding: 5px; margin-top: 13%; font-size: 15px; color: red;">
+                    <p style="margin-bottom: 3px;">Índice de Calor</p>
+                    <input id="HI" style="color: red;" disabled>
+                </div>
+            </div>
+            <div style="float: left; margin-top: 7%; margin-left: 20px;">
+                <div style="display: flex; align-items: center;">
+                    <button class="button" style="margin: 5px; width: 200px;" onclick="Tocar();">Opção em Áudio</button>
+                    <img src="audio.png" style="width: 75px; ">
+                </div>
+            </div>
+            <div style="float:left; width: 20%; text-align: center; margin-left: 40px; line-height: normal; margin-top: 20px;">
+                <h2 style="margin:0; font-size: 32px; color: rgb(24, 23, 23); font-weight: 500; margin-bottom: 5px;">Fontes</h2>
+                <div style="font-size:12px;">
+                    <a style="text-decoration: none; color: black;" href="https://www.if.ufrgs.br/~dschulz/web/sensacoes_term.htm">www.if.ufrgs.br/~dschulz/<br>web/sensacoes_term.htm</a>
+               
+                    <a style="text-decoration: none; color: black;" href="https://www.uol.com.br/ecoa/ultimas-noticias/2021/07/20/qual-relacao-entre-o-aquecimento-do-planeta-e-sensacao-termica.htm">www.uol.com.br/ecoa/ultimas-noticias/2021/07/20/qual-relacao-entre-o-aquecimento-do-planeta-e-sensacao-termica.htm</a>
+                                    
+                    <a style="text-decoration: none; color: black;" href="https://sites.usp.br/climatologia/">sites.usp.br/climatologia/</a>
+                
+                    <a style="text-decoration: none; color: black;" href="https://www.wpc.ncep.noaa.gov/html/heatindex.shtml">www.wpc.ncep.noaa.gov/html/heatindex.shtml</a>
+                
+                    <a style="text-decoration: none; color: black;" href="https://www.weather.gov/epz/wxcalc_windchill">www.weather.gov/epz/wxcalc_windchill</a>
+
+                    <a style="text-decoration: none; color: black;" href="https://sites.usp.br/climatologia/">sites.usp.br/climatologia/</a>
+
+                    <a style="text-decoration: none; color: black;" href="https://sites.usp.br/climatologia/afinal-o-que-e-sensacao-termica/">sites.usp.br/climatologia/afinal-o-que-e-sensacao-termica/</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <p class="subtitulo">LA NIÑA E EL NIÑO</p>
+        <h1 class="titulo">Fenômenos do Momento</h1>
+        <div class="colunas">
+            <div style="float:left; width: 45%; text-align: justify; padding-right: 25px;">
+                <p>La Niña: Como afeta o clima mundial?<br>A La niña faz parte das três etapas do padrão climático chamado El niño-Oscilação Sul (enso). O El niño é a etapa mais quente, enquanto a La niña é a etapa mais fria, e temos uma terceira etapa que é uma fase neutra. A La niña se forma quando os ventos que sopram sobre o Pacífico empurram as águas quentes de superfície para oeste, dessa forma as águas que são mais frias do oceano profundo sobem a superfície, causando distúrbios no clima mundial. Segundo a Organização Meteorológica Mundial, um novo La niña poderá reaparecer em 2021 com previsão de ser “moderado a forte”</p>
+            </div>
+            <div style="text-align: justify;">
+                <br>
+                El Niño<br>É um fenômeno atmosférico-oceânico, que tem como sua característica o alto aquecimento das águas do Oceano Pacífico Tropical, mais especificamente em sua superfície, isso pode levar a uma variação climática, nas regiões mais afetadas e também no mundo todo, por alterar os ventos alísios, levando a uma falta de precipitação em regiões tropicais e de médias latitudes. Esse evento corre em intervalos de 2 a 7 anos e causa problemas para áreas socioeconômicas e ambientais.
+            </div>
+            <div style="float:right; width: 25%; text-align: center; margin-right: 15%; margin-top: 20px; margin-bottom: 20px; line-height: normal;">
+                <h2 style="margin:0; font-size: 32px; color: rgb(24, 23, 23); font-weight: 500; margin-bottom: 5px;">Fontes</h2>
+                <div style="font-size:12px;">
+                    <a style="text-decoration: none; color: black;" href="https://www.bbc.com/portuguese/geral-54777251">www.bbc.com/portuguese/geral-54777251</a>
+    
+                    <a style="text-decoration: none; color: black;" href="https://news.un.org/pt/story/2021/09/1762452">news.un.org/pt/story/2021/09/1762452</a>
+    
+                    <a style="text-decoration: none; color: black;" href="enos.cptec.inpe.br">enos.cptec.inpe.br</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+</body>
